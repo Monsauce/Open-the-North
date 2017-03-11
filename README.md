@@ -4,6 +4,11 @@ Making ecological community data more accessible to the indigenous communities o
 ## Welcome
 Welcome to the Open the North repository. This document (README.md) details the focus of our project and how you can get involved. 
 ## Table of Contents
+* [What are we doing?](#what-are-we-doing)
+  * [The problem](#the-problem)
+  * [The solution](#the-solution)
+* [Who are we?](#who-are-we)
+* [What do we need?](#what-do-we-need)
 
 
 ## What are we doing? 
@@ -21,6 +26,7 @@ Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and 
 
 ## What do we need?
 
+## Glossary
 
 
 [link_farnorth]: https://www.ontario.ca/rural-and-north/far-north-ontario
