@@ -14,10 +14,11 @@ Welcome to the Open the North repository. This document (README.md) details the 
 ## What are we doing? 
 ### The problem
 * Ecological data from the Far North is not readily available to resident communities
+* Critical fish consumption data is not availible in a mobile-friendly, low bandwith format
 * Indigenous communities not proprtionaly represented at the open science table 
 
 ### The solution 
-With Open the North we seek to create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contibutions from citizen scientists. 
+With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide to Eating Ontario Fish] [link_Guide] 2. Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contibutions from citizen scientists. 
 
 This mobile friendly platform not only allows the addition of data but also the ability to download data. 
 
@@ -25,10 +26,22 @@ This mobile friendly platform not only allows the addition of data but also the 
 Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the creator of Open the North. 
 
 ## What do we need?
+### The Guide mobile app
+1. App developers to take the open data from the Ontario Ministry of the Environment and Climate Change and build a low bandwidth mobile app
+2. Designers to create the mobile app interface 
+3. Translators to translate the Guide text from English to Cree and Ojibway
+
+### The Repository 
+1. Upload open data from the Far North 
+2. Identify open data that we can extract and add to the repository 
 
 ## Glossary
+* **Ecological data**: Data on the number or size of animals and plants and the associated data of the environment they live in 
+* **README file**: a document that introduces an open project to the public and any potential contributors
+* **repository**: a collection of documents related to your project, in which you create and save new code or content
 
 
+[link_Guide]: https://www.ontario.ca/page/eating-ontario-fish-2017-18
 [link_farnorth]: https://www.ontario.ca/rural-and-north/far-north-ontario
 [link_Guelph]: https://www.uoguelph.ca/ib/
 [link_WCSC]: https://www.wcscanada.org/
