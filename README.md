@@ -18,7 +18,7 @@ Welcome to the Open the North repository. This document (README.md) details the 
 * Indigenous communities not proprtionaly represented at the open science table 
 
 ### The solution 
-With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide to Eating Ontario Fish] [link_Guide] 2. Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contibutions from citizen scientists. 
+With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide] 2. Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contibutions from citizen scientists. 
 
 This mobile friendly platform not only allows the addition of data but also the ability to download data. 
 
