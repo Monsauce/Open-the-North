@@ -24,6 +24,7 @@ With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide
 Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the creator of Open the North. You can contact Monica at monica.granados AT alumni.utoronto.ca
 
 ## What do we need?
+You can find information on how to contibute in the Contibution.md[contribution_link] but generally for the two themes of the project:
 ### The Guide mobile app
 1. App developers to take the open data from the Ontario Ministry of the Environment and Climate Change and build a low bandwidth mobile app
 2. Designers to create the mobile app interface 
@@ -34,7 +35,7 @@ Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and 
 2. Identify open data that we can extract and add to the repository 
 
 ## Glossary
-* **Ecological data**: Data on the number or size of animals and plants and the associated data of the environment they live in 
+* **ecological data**: Data on the number or size of animals and plants and the associated data of the environment they live in 
 * **README file**: a document that introduces an open project to the public and any potential contributors
 * **repository**: a collection of documents related to your project, in which you create and save new code or content
 
@@ -43,3 +44,4 @@ Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and 
 [link_farnorth]: https://www.ontario.ca/rural-and-north/far-north-ontario
 [link_Guelph]: https://www.uoguelph.ca/ib/
 [link_WCSC]: https://www.wcscanada.org/
+[contribution_link]: https://github.com/Monsauce/Open-the-North/blob/master/CONTRIBUTING.md
