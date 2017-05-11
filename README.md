@@ -26,7 +26,7 @@ With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide
 Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the creator of Open the North. You can contact Monica at monica.granados AT alumni.utoronto.ca. This project is a part of the Mozilla Open Leadership Training series. 
 
 ## What do we need?
-We are delighted you are interested in helping out. When you join us we ask that you follow our code of conduct in all interactions both on and offline. Can find all the participation guidlines at out [Code of Conduct][link_COC]
+We are delighted you are interested in helping out. When you join us we ask that you follow our code of conduct in all interactions both on and offline. Can find all the participation guidlines at out [CODE OF CONDUCT][link_COC]
 
 You can find information on how to contibute in the [CONTRIBUTING][link_contributing] but generally for the two themes of the project:
 ### The Guide mobile app
