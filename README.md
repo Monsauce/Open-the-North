@@ -28,7 +28,7 @@ Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and 
 ## What do we need?
 We are delighted you are interested in helping out. When you join us we ask that you follow our code of conduct in all interactions both on and offline. Can find all the participation guidlines at out [Code of Conduct][link_COC]
 
-You can find information on how to contibute in the [CONTRIBUTING.md][link_contributing] but generally for the two themes of the project:
+You can find information on how to contibute in the [CONTRIBUTING][link_contributing] but generally for the two themes of the project:
 ### The Guide mobile app
 1. App developers to take the open data from the Ontario Ministry of the Environment and Climate Change and build a low bandwidth mobile app
 2. Designers to create the mobile app interface 
