@@ -1,4 +1,4 @@
-![alt text](https://github.com/Monsauce/Open-the-North/blob/master/OpenTheNorthLogo.png)
+![alt text](https://github.com/Monsauce/Open-the-North/blob/master/OpenTheNorthLogoSmall.png)
 
 # Open-the-North
 Making ecological community data more accessible to the indigenous communities of the Far North
