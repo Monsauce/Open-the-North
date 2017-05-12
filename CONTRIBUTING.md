@@ -27,7 +27,7 @@ Once you have determined where you would like to contribute you can follow these
 
     This is now your copy of the project. You won't mess up anyone else's work so you're super safe.
     
-    Make sure to [keep your fork up to date][link_updateupstreamwiki] with the master repository.
+    Make sure to [keep your fork up to date][link_updateupstreamwiki] with the master repository. HT to Kirstie Whitaker for the info! 
 
 3. Make the changes you've discussed.
 
