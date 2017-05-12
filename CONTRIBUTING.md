@@ -38,7 +38,7 @@ Once you have determined where you would like to contribute you can follow these
     The Open the North exexcutive team will review your changes and if everything is up to board merge them in!
 
 ## Recognising contributions
-In addition to many thank yous and virtual high fives we will be recognizing contributions by adding your name to the app! 
+In addition to many thank yous and virtual high fives we will be recognizing contributions by adding your name (or your nom de plume) to the app! 
 
 ## Contact us 
 You can always open up an issue and the Open the North exexcutive team will answer it in a jiffy, if however you want to have a private conversation you can always email Monica at monica.granados AT alumni.utoronto.ca.
