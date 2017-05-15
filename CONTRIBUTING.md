@@ -35,7 +35,7 @@ Once you have determined where you would like to contribute you can follow these
 
 4. Submit a [pull request][link_pullrequest].
     
-    The Open the North exexcutive team will review your changes and if everything is up to board merge them in!
+    The Open the North executive team will review your changes and if everything is up to board merge them in!
 
 ## Recognising contributions
 In addition to many thank yous and virtual high fives we will be recognizing contributions by adding your name (or your nom de plume) to the app! 
