@@ -4,171 +4,161 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { StyleSheet, View, AppRegistry, Text } from 'react-native';
-
-
-/*
-var React = require('react');
-var ReactNative = require('react-native');
-var {
-  StyleSheet,
-  Text,
-  View,
-} = ReactNative;
-*/
+import React, { Component, } from 'react';
+import { StyleSheet, View, AppRegistry, Text, Button, Picker, Switch, TextInput } from 'react-native';
 
 import {
-  StackNavigator,
+  TabNavigator,
 } from 'react-navigation';
 
-const App = StackNavigator({
-  Main: {screen: MainScreen},
-  Profile: {screen: GeolocationExample},x
-});
 
-
-class MainScreen extends React.Component {
+class MyLocationScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome',
-  };
-  render() {
-    const { navigate } = this.props.navigation;
-    return (
-      <Button
-        title="Go to Jane's profile"
-        onPress={() =>
-          navigate('Profile', { name: 'Jane' });
-        }
+    tabBarLabel: '1',
+    // Note: By default the icon is only shown on iOS. Search the showIcon option below.
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('./img/OpenTheNorthLogoSmall.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
       />
-    );
-  }
-}
-
-exports.framework = 'React';
-exports.title = 'Geolocation';
-exports.description = 'Examples of using the Geolocation API.';
-
-exports.examples = [
-  {
-    title: 'navigator.geolocation',
-    render: function(): Element<any> {
-      return <GeolocationExample />;
-    },
-  }
-];
-
-class GeolocationExample extends Component {
-  state = {
-    initialPosition: 'unknown',
-    lastPosition: 'unknown',
+    ),
   };
 
-  watchID: ?number = null;
-
-  componentDidMount() {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        var initialPosition = JSON.stringify(position);
-        this.setState({initialPosition});
-      },
-      (error) => alert(JSON.stringify(error)),
-      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-    );
-    this.watchID = navigator.geolocation.watchPosition((position) => {
-      var lastPosition = JSON.stringify(position);
-      this.setState({lastPosition});
-    });
-  }
-
-  componentWillUnmount() {
-    navigator.geolocation.clearWatch(this.watchID);
-  }
-
   render() {
     return (
-      <View>
-        <Text>
-          <Text style={styles.title}>Initial position: </Text>
-          {this.state.initialPosition}
-        </Text>
-        <Text>
-          <Text style={styles.title}>Current position: </Text>
-          {this.state.lastPosition}
-        </Text>
-      </View>
+    <View>
+      <Text>Where did you catch your fish?</Text>
+      <TextInput
+          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          onChangeText={(text) => this.setState({text})}
+          value="Search fishing locations by name."
+        />
+      <Button
+          onPress={() => this.props.navigation.goBack()}
+          title="Get list of nearby locations."
+        />
+    </View>
     );
   }
 }
 
-var styles = StyleSheet.create({
-  title: {
-    fontWeight: '500',
-  },
-});
+class MySensitiveScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: '2',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('./img/OpenTheNorthLogoSmall.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+  };
 
-class HelloWorldApp extends Component {
   render() {
     return (
-      <Text>Hello world!</Text>
+    <View>
+      <Text>Are you under 15 years old?</Text>
+      <Switch/>
+      <Text>Are you a woman who is pregnant or intends to become pregnant?</Text>
+      <Switch/>
+    </View>
     );
   }
 }
 
-AppRegistry.registerComponent('OpenTheNorthApp', () => GeolocationExample);
+class MySpeciesScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: '3',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('./img/OpenTheNorthLogoSmall.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+  };
 
-
-
-
-/*
-
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Image
-} from 'react-native';
-
-export default class OpenTheNorthApp extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Image source={require('./img/OpenTheNorthLogoSmall.png')} />
-        <Text style={styles.welcome}>
-          Open the North!
-        </Text>
-        <Text style={styles.instructions}>
-          Building a mobile app and open repository{"\n"}
-          for indigenous ecological data and resources.
-        </Text>
-        <Text style={styles.instructions}>
-          {"https://github.com/Monsauce/Open-the-North"}
-        </Text>
-      </View>
+    <View>
+      <Text>What is the species of your fish?</Text>
+      <Picker>
+        <Picker.Item label="Java" value="java" />
+        <Picker.Item label="JavaScript" value="js" />
+      </Picker>
+    </View>
     );
   }
 }
+
+class MySizeScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: '4',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('./img/OpenTheNorthLogoSmall.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+  };
+
+  render() {
+    return (
+    <View>
+      <Text>What is the length of your fish?</Text>
+      <Picker>
+        <Picker.Item label="Java" value="java" />
+        <Picker.Item label="JavaScript" value="js" />
+      </Picker>
+    </View> 
+    );
+  }
+}
+
+class MyResultScreen extends React.Component {
+  static navigationOptions = {
+    tabBarLabel: '5',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('./img/OpenTheNorthLogoSmall.png')}
+        style={[styles.icon, {tintColor: tintColor}]}
+      />
+    ),
+  };
+
+  render() {
+    return (
+    <Text> You can eat this many fish safely.</Text>
+    );
+  }
+}
+
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  icon: {
+    width: 26,
+    height: 26,
   },
 });
 
-AppRegistry.registerComponent('OpenTheNorthApp', () => OpenTheNorthApp);
-*/
+const MyApp = TabNavigator({
+  Location: {
+    screen: MyLocationScreen,
+  },
+  Sensitive: {
+    screen: MySensitiveScreen,
+  },
+  Species: {
+    screen: MySpeciesScreen,
+  },
+  Size: {
+    screen: MySizeScreen,
+  },
+  Result: {
+    screen: MyResultScreen,
+  },
+}, {
+  tabBarOptions: {
+    activeTintColor: '#e91e63',
+  },
+});
+
+AppRegistry.registerComponent('OpenTheNorthApp', () => MyApp);
