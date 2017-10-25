@@ -33,7 +33,7 @@ Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and 
 We are delighted you are interested in helping out. When you join us we ask that you follow our code of conduct in all interactions both on and offline. Can find all the participation guidelines at out [CODE OF CONDUCT][link_COC]
 
 You can find information on how to contribute in [CONTRIBUTING][link_contributing] but generally for the two themes of the project:
-### The Guide mobile app
+### GEOF Mobile App
 We now have a working beta version of the mobile app! But we want to make it as funcitonal as possible. We need:
 1. Designers to create the mobile app interface 
 2. Developer to add a localization fucntion
@@ -41,7 +41,7 @@ We now have a working beta version of the mobile app! But we want to make it as 
 
 Have a look at our [Roadmap][link_Roadmap] for our timelines and progress!
 
-### The Repository 
+### OTN repository 
 1. Upload open data from the Far North 
 2. Identify open data that we can extract and add to the repository 
 
