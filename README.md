@@ -39,6 +39,8 @@ We now have a working beta version of the mobile app! But we want to make it as 
 2. Developer to add a localization fucntion
 3. Translators to translate the Guide text from English to Cree and Ojibway
 
+Have a look at our [Roadmap][link_Roadmap] for our timelines and progress!
+
 ### The Repository 
 1. Upload open data from the Far North 
 2. Identify open data that we can extract and add to the repository 
@@ -58,3 +60,4 @@ We now have a working beta version of the mobile app! But we want to make it as 
 [link_Jacob]: https://ca.linkedin.com/in/jacobritchie1
 [link_COC]: https://github.com/Monsauce/Open-the-North/blob/master/CODE%20OF%20CONDUCT.md
 [link_contributing]: https://github.com/Monsauce/Open-the-North/blob/master/CONTRIBUTING.md
+[link_Roadmap]: https://github.com/Monsauce/Open-the-North/blob/master/GEOFRoadMap.md
