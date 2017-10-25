@@ -20,10 +20,14 @@ Welcome to the Open the North repository. This document (README.md) details the 
 * Indigenous communities not proportionally represented at the open science table 
 
 ### The solution 
-With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide] (GEOF app) 2. Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contributions from citizen scientists. This mobile friendly platform not only allows the addition of data but also the ability to download data. 
+With Open the North we seek to 
+1. **GEOF Mobile App** Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide]
+The [Ontario Ministry of the Environment and Climate Change (MOECC)][link_MOECC] publishes guidlines on how many fish of (a given subset of sportfish) is safe to eat. While this information is availible in a printed guide and on a their website, the information is displayed not displayed in a user friendly format and is inaccessible to individuals living in remote regions of the province. We are building a mobile app version of the guide using open data availiable through the MOECC.   
+
+2. **OTN Repository** Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contributions from citizen scientists. This mobile friendly platform not only allows the addition of data but also the ability to download data. 
 
 ## Who are we?
-Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the lead of Open the North. You can contact Monica at monica.granados AT alumni.utoronto.ca. This project is a part of the Mozilla Open Leadership Training series. [Brie Edwards][link_Brie] is a Research Scientist at [Ontario Ministry of the Environment and Climate Change] [link_MOECC] and provides project support for Open the North. [Jacob Ritchie][link_Jacob] is the lead developer of the GEOF moble app.  
+Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the lead of Open the North. You can contact Monica at monica.granados AT alumni.utoronto.ca. This project is a part of the Mozilla Open Leadership Training series. [Brie Edwards][link_Brie] is a Research Scientist at the MOECC and provides project support for Open the North. [Jacob Ritchie][link_Jacob] is the lead developer of the GEOF moble app.  
 
 ## What do we need?
 We are delighted you are interested in helping out. When you join us we ask that you follow our code of conduct in all interactions both on and offline. Can find all the participation guidelines at out [CODE OF CONDUCT][link_COC]
