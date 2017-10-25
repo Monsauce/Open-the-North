@@ -1,7 +1,7 @@
 ![alt text](https://github.com/Monsauce/Open-the-North/blob/master/OpenTheNorthLogoSmall.png)
 
 # Open-the-North
-Making ecological community data more accessible to the indigenous communities of the Far North
+Making ecological community and fish consumption data more accessible to the indigenous communities of the Far North
 
 ## Welcome
 Welcome to the Open the North repository. This document (README.md) details the focus of our project and how you can get involved. 
@@ -20,18 +20,19 @@ Welcome to the Open the North repository. This document (README.md) details the 
 * Indigenous communities not proportionally represented at the open science table 
 
 ### The solution 
-With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide] 2. Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contributions from citizen scientists. This mobile friendly platform not only allows the addition of data but also the ability to download data. 
+With Open the North we seek to 1. Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide] (GEOF) 2. Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contributions from citizen scientists. This mobile friendly platform not only allows the addition of data but also the ability to download data. 
 
 ## Who are we?
-Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the lead of Open the North. You can contact Monica at monica.granados AT alumni.utoronto.ca. This project is a part of the Mozilla Open Leadership Training series. [Brie Edwards][link_Brie] is a Freshwater Research Associate at Wildlife Conservation Society Canada the at provides project support for Open the North. 
+Monica is a post-doctoral fellow at the [Univeristy of Guelph][link_Guelph] and the [Wildlife Conservation Society Canada][link_WCSC] and the lead of Open the North. You can contact Monica at monica.granados AT alumni.utoronto.ca. This project is a part of the Mozilla Open Leadership Training series. [Brie Edwards][link_Brie] is a Research Scientist at [Ontario Ministry of the Environment and Climate Change] [link_MOECC] and provides project support for Open the North. [Jacob Ritchie] [link_Jacob] is the lead developer of the GEOF moble app.  
 
 ## What do we need?
 We are delighted you are interested in helping out. When you join us we ask that you follow our code of conduct in all interactions both on and offline. Can find all the participation guidelines at out [CODE OF CONDUCT][link_COC]
 
 You can find information on how to contribute in [CONTRIBUTING][link_contributing] but generally for the two themes of the project:
 ### The Guide mobile app
-1. App developers to take the open data from the Ontario Ministry of the Environment and Climate Change and build a low bandwidth mobile app
-2. Designers to create the mobile app interface 
+We now have a working beta version of the mobile app! But we want to make it as funcitonal as possible. We need:
+1. Designers to create the mobile app interface 
+2. Developer to add a localization fucntion
 3. Translators to translate the Guide text from English to Cree and Ojibway
 
 ### The Repository 
@@ -47,7 +48,8 @@ You can find information on how to contribute in [CONTRIBUTING][link_contributin
 [link_Guide]: https://www.ontario.ca/page/eating-ontario-fish-2017-18
 [link_farnorth]: https://www.ontario.ca/rural-and-north/far-north-ontario
 [link_Guelph]: https://www.uoguelph.ca/ib/
-[link_WCSC]: https://www.wcscanada.org/
+[link_MOE]: https://www.ontario.ca/page/ministry-environment-and-climate-change
 [link_Brie]: https://www.wcscanada.org/About-Us/Staff.aspx
+[link_Jacob]: https://ca.linkedin.com/in/jacobritchie1
 [link_COC]: https://github.com/Monsauce/Open-the-North/blob/master/CODE%20OF%20CONDUCT.md
 [link_contributing]: https://github.com/Monsauce/Open-the-North/blob/master/CONTRIBUTING.md
