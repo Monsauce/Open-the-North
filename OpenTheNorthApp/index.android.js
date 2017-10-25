@@ -348,7 +348,15 @@ class MySpeciesScreen extends React.Component {
     this.onChangeSpecies = this.onChangeSpecies.bind(this)
   }
 
-  onChangeSpecies(itemValue, itemIndex) { this.setState({species: itemValue}) }
+  onChangeSpecies(itemValue, itemIndex) {
+    this.setState({species: itemValue})
+    var questionnaire = {
+      length: this.props.screenProps.questionnaire.length,
+      species_code: itemValue
+    };
+    //console.warn(questionnaire);
+    this.props.screenProps.handleQuestionnaireChange(questionnaire)
+  }
 
   render() {
 
@@ -489,12 +497,12 @@ class MyResultScreen extends React.Component {
             console.log("here")
             if (results.rows.item(0))
             {
-              that.state.name = results.rows.item(0).ADV_LEVEL;
-              that.setState(that.state);
+              //that.state.name = results.rows.item(0).ADV_LEVEL;
+              that.setState((prevState, props) => {return {name: results.rows.item(0).ADV_LEVEL}});
             }
             else {
-              that.state.name = "ERROR: no such combination of attributes";
-              that.setState(that.state);
+              //that.state.name = "ERROR: no such combination of attributes";
+              that.setState((prevState, props) => {return {name: "<ERROR: no such combination of attributes>"}});
             }
             console.log("there")
 

@@ -118,6 +118,7 @@
      loadAndQueryDB(){
          this.state.progress.push("Opening database ...");
          this.setState(this.state);
+         //db = SQLite.openDatabase({name: 'example.db', readOnly: true, createFromLocation : "~example.db"}, this.openCB, this.errorCB);
          db = SQLite.openDatabase({name: 'example.db', readOnly: true, createFromLocation : "www/example.db"}, this.openCB, this.errorCB);
          //db = SQLite.openDatabase(database_name, database_version, database_displayname, database_size, this.openCB, this.errorCB);
         //  function() sleep(ms) {
@@ -246,12 +247,16 @@
 
 class MyLocationScreen extends React.Component {
 
-  constructor(props) {
+ constructor(props)
+ {
    super(props);
-    this.state = {name:"SOME NUMBER", db:undefined};
-  // this.successcb = this.successcb.bind(this);
-
+   this.state = {wb:46387936};
+   // this.state = {name:"SOME NUMBER", db:undefined};
+   // this.successcb = this.successcb.bind(this);
+   this.onChangeWB = this.onChangeWB.bind(this)
  }
+
+ onChangeWB(itemValue, itemIndex) { this.setState({wb: itemValue}) }
 
   static navigationOptions = {
     tabBarLabel: 'LAKE',
@@ -270,7 +275,8 @@ class MyLocationScreen extends React.Component {
     return (
     <View>
       <Text>Where did you catch your fish?</Text>
-          <Picker>
+      <Picker selectedValue={this.state.wb}
+       onValueChange={(itemValue,itemIndex) => this.onChangeWB(itemValue,itemIndex)}>
           {waterbodies.map(
             function(waterbody) {
             return <Picker.Item label={waterbody[1]} value={waterbody[0]} key={waterbody[0]} />
@@ -301,13 +307,25 @@ class MySensitiveScreen extends React.Component {
     ),
   };
 
+  constructor(props)
+  {
+    super(props);
+    this.state = {age:false, woman:false};
+    this.ageChange = this.ageChange.bind(this);
+    this.womanChange = this.womanChange.bind(this);
+  }
+
+  //two different ways of doing this
+  ageChange(value) { this.setState({age:value, woman:this.state.woman});}
+  womanChange(value) {this.state.woman = value; this.setState(this.state);}
+
   render() {
     return (
     <View>
       <Text>Are you under 15 years old?</Text>
-      <Switch/>
+      <Switch onValueChange={value => this.ageChange(value)} value={this.state.age} />
       <Text>Are you a woman who is pregnant or intends to become pregnant?</Text>
-      <Switch/>
+      <Switch onValueChange={value => this.womanChange(value)} value={this.state.woman}/>
     </View>
     );
   }
@@ -324,6 +342,23 @@ class MySpeciesScreen extends React.Component {
     ),
   };
 
+  constructor(props)
+  {
+    super(props);
+    this.state = {species:41};
+    this.onChangeSpecies = this.onChangeSpecies.bind(this)
+  }
+
+  onChangeSpecies(itemValue, itemIndex) {
+    this.setState({species: itemValue})
+    var questionnaire = {
+      length: this.props.screenProps.questionnaire.length,
+      species_code: itemValue
+    };
+    //console.warn(questionnaire);
+    this.props.screenProps.handleQuestionnaireChange(questionnaire)
+  }
+
   render() {
 
       var species = [[31, "Sturgeon"], [41, "Longnose Gar"], [51, "Bowfin"], [63, "Gizzard Shad"], [71, "Pink Salmon"], [73, "Coho Salmon"], [75, "Chinook Salmon"], [76, "Rainbow Trout"], [77, "Atlantic Salmon"], [78, "Brown Trout"], [80, "Brook Trout"], [81, "Lake Trout"], [82, "Splake"], [83, "Aurora Trout"], [87, "Siscowet"], [91, "Lake Whitefish"], [93, "Cisco(Lake Herring)"], [102, "Round Whitefish"], [121, "Rainbow Smelt"], [131, "Northern Pike"], [132, "Muskellunge"], [151, "Goldeye"], [152, "Mooneye"], [161, "Quillback Carpsucker"], [162, "Longnose Sucker"], [163, "White Sucker"], [166, "Bigmouth Buffalo"], [177, "Redhorse Sucker"], [181, "Goldfish"], [186, "Common Carp"], [233, "Brown Bullhead"], [234, "Channel Catfish"], [271, "Ling (Burbot)"], [301, "White Perch"], [302, "White Bass"], [311, "Rock Bass"], [313, "Pumpkinseed"], [314, "Bluegill"], [316, "Smallmouth Bass"], [317, "Largemouth Bass"], [318, "White Crappie"], [319, "Black Crappie"], [331, "Yellow Perch"], [332, "Sauger"], [334, "Walleye"], [371, "Freshwater Drum"], [400, "Salmon Hybrid"], [450, "Whitefish hybrid"]];
@@ -332,7 +367,8 @@ class MySpeciesScreen extends React.Component {
 
     <View>
       <Text>What is the species of your fish?</Text>
-      <Picker>
+      <Picker selectedValue={this.state.species}
+       onValueChange={(itemValue,itemIndex) => this.onChangeSpecies(itemValue,itemIndex)}>
       {species.map(
         function(species) {
         return <Picker.Item label={species[1]} value={species[0]} key={species[0]} />
@@ -354,9 +390,26 @@ class MySizeScreen extends React.Component {
     ),
   };
 
-  //TODO: replace with db call
+  constructor(props)
+  {
+    super(props);
+    this.state = {length:15};
+    this.onChangeLength = this.onChangeLength.bind(this)
+  }
+
+  onChangeLength(itemValue, itemIndex) {
+    this.setState({length: itemValue});
+    var questionnaire = {
+      length: itemValue,
+      species_code: this.props.screenProps.questionnaire.species_code
+    };
+    //console.warn(questionnaire);
+    this.props.screenProps.handleQuestionnaireChange(questionnaire)
+  }
+
 
   render() {
+    //TODO: replace with db call
 
     var AllFishLengths = [
        [15, '15-20cm'],
@@ -378,7 +431,8 @@ class MySizeScreen extends React.Component {
 
     <View>
       <Text>What is the length of your fish?</Text>
-      <Picker>
+      <Picker selectedValue={this.state.length}
+       onValueChange={(itemValue,itemIndex) => this.onChangeLength(itemValue,itemIndex)}>
         {AllFishLengths.map(
           function(fish_length) {
           return <Picker.Item label={fish_length[1]} value={fish_length[0]} key={fish_length[0]} />
@@ -398,13 +452,28 @@ class MyResultScreen extends React.Component {
  }
 
  componentWillMount() {
-   this.test_database()
+   this.test_database();
  }
   //static db;
 
+
+  shouldComponentUpdate(nextProps, nextState)
+  {
+    console.log(this.props.screenProps.questionnaire.length, "?=", nextProps.screenProps.questionnaire.length);
+    console.log(this.props.screenProps.questionnaire.species_code, "?=",nextProps.screenProps.questionnaire.species_code);
+    console.log(this.state.name, "?=",nextState.name);
+    return (this.props.screenProps.questionnaire.length != nextProps.screenProps.questionnaire.length)||(this.props.screenProps.questionnaire.species_code != nextProps.screenProps.questionnaire.species_code)||(this.state.name !=nextState.name);
+  }
+
+  componentWillUpdate() {
+    this.successcb();
+  }
+
   test_database() {
     //var db = SQLite.openDatabase({name: 'example.db', readOnly: true, createFromLocation : "www/example.db"}, this.successcb, this.errorcb);
-    this.state.db = SQLite.openDatabase({name: 'example.db', readOnly: true, createFromLocation : "www/example.db"}, this.successcb, this.errorcb);
+
+    console.log("I AM BEING CALLED");
+    this.state.db = SQLite.openDatabase({name: 'example.db', readOnly: true, createFromLocation : "~example.db"}, this.successcb, this.errorcb);
     this.setState(this.state);
     //var db = SQLite.openDatabase()
     //var txt = "NOT WORKING";
@@ -412,18 +481,32 @@ class MyResultScreen extends React.Component {
   };
 
   successcb(){
-    this.state.name = "SOME NUMBER";
-    this.setState(this.state);
+    //this.state.name = "SOME NUMBER";
+    //this.setState(this.state);
     var that = this;
     this.state.db.transaction((tx) => {
-      var length=40;
-      var waterbody=44277609; // Ganonoque lake;
-      var species=317;//Largemouth Bass;
+      var length=that.props.screenProps.questionnaire.length;
+      //var length=40;
+      //var waterbody=44277609; // Ganonoque lake;
+      var species=that.props.screenProps.questionnaire.species_code;
+      console.log(length,species)
+      console.log("????","PROFIT")
+      //var species=317;//Largemouth Bass;
       //TODO: add sensitive population -- can't find which column distinguishes sensitive/non-sensitive
       //TODO: add waterbody -- works in python, why not in react-native ??
        tx.executeSql('SELECT ADV_LEVEL FROM fishes WHERE LENGTH_CATEGORY_ID='+ length + ' AND SPECIES_CODE='+ species + ';', [], (tx, results) => {
-            that.state.name = results.rows.item(0).ADV_LEVEL;
-            that.setState(that.state);
+            console.log("here")
+            if (results.rows.item(0))
+            {
+              //that.state.name = results.rows.item(0).ADV_LEVEL;
+              that.setState((prevState, props) => {return {name: results.rows.item(0).ADV_LEVEL}});
+            }
+            else {
+              //that.state.name = "ERROR: no such combination of attributes";
+              that.setState((prevState, props) => {return {name: "<ERROR: no such combination of attributes>"}});
+            }
+            console.log("there")
+
             //console.warn(results.rows.item(0).ADV_LEVEL);
           }
         );
@@ -448,7 +531,17 @@ class MyResultScreen extends React.Component {
   render() {
     return (
     <View>
-    <Text>You can eat this many fish safely: {this.state.name}</Text>
+    <Text>You can eat {this.state.name} meals* of this fish safely in a one-month period </Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text></Text>
+    <Text>*One meal is defined as 0.5 lbs (227 grams) of fish, or one normal-sized fillet.</Text>
     </View>
     );
   }
@@ -490,23 +583,30 @@ const styles = StyleSheet.create({
 class TopLevelApp extends React.Component {
 
   populateDb () {
-
+    return undefined;
   }
 
   constructor(props){
     super(props);
     var questionnaire = {
-                        sensitive: undefined,
-                        waterbody_code: undefined,
-                        species_code: undefined,
-                        length: undefined
+                        //sensitive: undefined,
+                        //waterbody_code: undefined,
+                        species_code: 317,
+                        length: 40
                         }
     this.state = {db: this.populateDb(), questionnaire: questionnaire}
+    this.handleQuestionnaireChange = this.handleQuestionnaireChange.bind(this)
+  }
+
+  handleQuestionnaireChange(questionnaire) {
+    this.state.questionnaire = questionnaire;
+    this.setState(this.state);
+    //forceUpdate()
+    console.log(this);
   }
 
   render () {
-      return  (<MyNavigator/>)
-  //  return  (<MyNavigator screenProps={db: this.state.db}/>)
+      return  (<MyNavigator screenProps={{questionnaire: this.state.questionnaire, handleQuestionnaireChange:this.handleQuestionnaireChange}}/>)
   }
 }
 
