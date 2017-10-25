@@ -22,7 +22,7 @@ Welcome to the Open the North repository. This document (README.md) details the 
 ### The solution 
 With Open the North we seek to 
 1. **GEOF Mobile App** Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide]
-The [Ontario Ministry of the Environment and Climate Change (MOECC)][link_MOECC] publishes guidlines on how many fish of (a given subset of sportfish) is safe to eat. While this information is availible in a printed guide and on a their website, the information is displayed not displayed in a user friendly format and is inaccessible to individuals living in remote regions of the province. We are building a mobile app version of the guide using open data availiable through the MOECC.   
+The [Ontario Ministry of the Environment and Climate Change (MOECC)][link_MOECC] publishes guidelines on how many fish of (a given subset of sportfish) is safe to eat. While this information is available in a printed guide and on their website, the information is displayed not displayed in a user-friendly format and is inaccessible to individuals living in remote regions of the province. We are building a mobile app version of the guide using open data available through the MOECC.
 
 2. **OTN Repository** Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contributions from citizen scientists. This mobile friendly platform not only allows the addition of data but also the ability to download data. 
 
