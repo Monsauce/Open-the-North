@@ -52,7 +52,7 @@ We now have a working beta version of the mobile app! But we want to make it as 
 [link_Guide]: https://www.ontario.ca/page/eating-ontario-fish-2017-18
 [link_farnorth]: https://www.ontario.ca/rural-and-north/far-north-ontario
 [link_Guelph]: https://www.uoguelph.ca/ib/
-[link_MOE]: https://www.ontario.ca/page/ministry-environment-and-climate-change
+[link_MOECC]: https://www.ontario.ca/page/ministry-environment-and-climate-change
 [link_Brie]: https://www.wcscanada.org/About-Us/Staff.aspx
 [link_Jacob]: https://ca.linkedin.com/in/jacobritchie1
 [link_COC]: https://github.com/Monsauce/Open-the-North/blob/master/CODE%20OF%20CONDUCT.md
