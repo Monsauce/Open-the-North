@@ -16,7 +16,7 @@ Read more about the guide and how we are trying to improve it at [README.md][lin
 #### Phase II (October 2017-February 2018)
 - [ ] **Finalize UI** Bring on a designer to finish the UI
 - [ ] **Version 1.0** 
-- [ ] **Testing in remote communities* 
+- [ ] **Testing in remote communities** Bring the app to remote communities in the Far North  
 - [ ] **Localization** Add localization functionality
 
 #### Phase III (February-December 2018)
