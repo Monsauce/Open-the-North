@@ -22,7 +22,7 @@ Welcome to the Open the North repository. This document (README.md) details the 
 ### The solution 
 With Open the North we seek to 
 1. **GEOF Mobile App** Build a mobile app for the [Guide to the Guide to Eating Ontario Fish][link_Guide]
-The [Ontario Ministry of the Environment and Climate Change (MOECC)][link_MOECC] publishes guidelines on how many fish of (a given subset of sportfish) is safe to eat. While this information is available in a printed guide and on their website, the information is displayed not displayed in a user-friendly format and is inaccessible to individuals living in remote regions of the province. We are building a mobile app version of the guide using open data available through the MOECC.
+The [Ontario Ministry of the Environment and Climate Change (MOECC)][link_MOECC] publishes guidelines on how many fish of (a given subset of sportfish) is safe to eat. While this information is available in a [printed guide][link_youtube] and on their website, the information is displayed not displayed in a user-friendly format and is inaccessible to individuals living in remote regions of the province (. We are building a mobile app version of the guide using open data available through the MOECC.
 
 2. **OTN Repository** Create a open repository that stores open data from the [Far North][link_farnorth] of Ontario. This virtual storage space will allow anyone to contribute open data collected from the Far North with a user friendly interface. The repository welcomes data from the federal and provincial governments, NGO's, conservation groups and encourages contributions from citizen scientists. This mobile friendly platform not only allows the addition of data but also the ability to download data. 
 
@@ -61,3 +61,4 @@ Have a look at our [Roadmap][link_Roadmap] for our timelines and progress!
 [link_COC]: https://github.com/Monsauce/Open-the-North/blob/master/CODE%20OF%20CONDUCT.md
 [link_contributing]: https://github.com/Monsauce/Open-the-North/blob/master/CONTRIBUTING.md
 [link_Roadmap]: https://github.com/Monsauce/Open-the-North/blob/master/GEOFRoadMap.md
+[link_youtube]: https://www.youtube.com/watch?v=zowYVMhJZkc
