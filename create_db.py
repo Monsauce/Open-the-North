@@ -4,7 +4,7 @@ import json
 def print_cols(df):
 	for x in df.columns:
 		print x
-print_cols(df)
+#print_cols(df)
 
 def create_query():
 	return ''
@@ -18,15 +18,40 @@ def generate_mappings(df):
 	with open("waterbodies.js","w") as f:
 		f.write("waterbodies = ")
 		f.write(json.dumps(df[["WATERBODY_CODE","GUIDE_LOCNAME_ENG"]].iloc[np.unique(df["WATERBODY_CODE"].values, return_index=1)[1]].values.tolist()))
-w	df[["ADV_LEVEL"]].iloc[np.unique(df["ADV_LEVEL"].values, return_index=1)[1]]
 
-	df[["ADV_LEVEL"]].iloc[np.unique(df["ADV_LEVEL"].values, return_index=1)[1]].values
-	df[["LENGTH_CATEGORY_ID","LENGTH_CATEGORY_LABEL"]].iloc[np.unique(df["LENGTH_CATEGORY_ID"].values, return_index=1)[1]].values
 	with open("species.js","w") as f:
 		f.write("species = "+json.dumps(df[["SPECIES_CODE","SPECNAME"]].iloc[np.unique(df["SPECIES_CODE"].values, return_index=1)[1]].values.tolist()))
-	json.dumps(df[["SPECIES_CODE","SPECNAME"]].iloc[np.unique(df["SPECIES_CODE"].values, return_index=1)[1]].values.tolist())
+		f.write(json.dumps(df[["SPECIES_CODE","SPECNAME"]].iloc[np.unique(df["SPECIES_CODE"].values, return_index=1)[1]].values.tolist()))
 
 	return
+
+
+def make_hack_txt(df,output_filename,col,max_rows=None):
+	# gets all unique values in a column and dumps to outfile
+		if max_rows:
+			trunc_df = df[:max_rows]
+		else:
+			trunc_df = df
+		with open(output_filename,"w") as f:
+			#print np.unique(df["WATERBODY_CODE"].values, return_index=1)[1]
+			vals = np.unique(trunc_df.iloc[0:][col].values)
+			string = ""
+			i = 0
+			for item in vals:
+				string += "<option value=\"" + item + "\">" +  item + "</option>\n"
+				#string += "<option value=\"" + str(i) + "\">" +  item + "</option>\n"
+				i+=1
+			f.write(string)
+
+def generate_mappings_bootstrap_hack(df):
+			make_hack_txt(df,"waterbodies.txt","GUIDE_LOCNAME_ENG")
+			make_hack_txt(df,"fish.txt","SPECNAME")
+			make_hack_txt(df,"lengths.txt","LENGTH_CATEGORY_LABEL")
+			#f.write(json.dumps(df[["WATERBODY_CODE",]].values.tolist()))
+
+
+
+
 
 def create_db(df):
 	conn = sqlite3.connect('example_small.db')
@@ -50,8 +75,9 @@ def create_db(df):
 
 def main():
 	df = pandas.read_csv("FishGuideRawData.csv")
-	generate_mappings(df)
+	#generate_mappings(df)
 	print_cols(df)
-	create_db(df)
+	generate_mappings_bootstrap_hack(df)
+	#create_db(df)
 
 main()

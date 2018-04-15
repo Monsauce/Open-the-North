@@ -1,0 +1,36 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 2rem 2rem;
+}
+
+.lead {
+    font-size: 1.75rem;
+    font-weight: 350;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
+
+.question-text {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.results-text {
+  font-size: 1.35rem;
+  font-weight: 320;
+}
+
+strong {
+  font-size: 1.50rem;
+  font-weight: 350;
+}
