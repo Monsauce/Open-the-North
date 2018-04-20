@@ -1,6 +1,8 @@
 import pandas
 import sqlite3
 import json
+from sqlalchemy import create_engine
+
 def print_cols(df):
 	for x in df.columns:
 		print x
@@ -50,7 +52,18 @@ def generate_mappings_bootstrap_hack(df):
 			#f.write(json.dumps(df[["WATERBODY_CODE",]].values.tolist()))
 
 
+def try_it(df):
+	with open("test.txt", "w") as f:
+		for row in df.iterrows():
+			#print row[1]
+			f.write("[" + str(row[1]["WATERBODY_CODE"]) + "," + str(row[1]["SPECIES_CODE"]) + "," + str(1) + "]\n")
 
+
+def create_postgres_db(df):
+	df.columns = [c.lower() for c in df.columns] #postgres doesn't like capitals or spaces
+	engine = create_engine('postgresql://username:password@localhost:5432/dbname')
+
+	df.to_sql("my_table_name", engine)
 
 
 def create_db(df):
@@ -77,7 +90,9 @@ def main():
 	df = pandas.read_csv("FishGuideRawData.csv")
 	#generate_mappings(df)
 	print_cols(df)
+	df = df[[""]]
 	generate_mappings_bootstrap_hack(df)
+	try_it(df)
 	#create_db(df)
 
 main()

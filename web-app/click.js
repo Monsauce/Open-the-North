@@ -32,4 +32,7 @@ $('#getResults').on('click', function (e) {
 
      results.append(text)
 
+     $.ajax("http://localhost:5000/Fish/Lake/40/sensitive").done(function (reply) {
+              results.append(reply);
+           });
 })

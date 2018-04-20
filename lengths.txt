@@ -10,4 +10,4 @@
 <option value="60-65cm">60-65cm</option>
 <option value="65-70cm">65-70cm</option>
 <option value="70-75cm">70-75cm</option>
-<option value=">75cm">75cm</option>
+<option value=">75cm">>75cm</option>
